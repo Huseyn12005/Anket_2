@@ -57,20 +57,6 @@ namespace Anket_2
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedItem is Person person)
-            {
-                tb_ad.Text = person.ad;
-                tb_soyad.Text = person.soyad;
-                tb_email.Text = person.email;
-                tb_tel.Text = person.tel;
-                tb_birhday.Text = person.dogum;
-                button_deyis.Visible = true;
-                button_elave.Visible = false;
-            }
-        }
-
         private void button_deyis_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tb_ad.Text) && !string.IsNullOrEmpty(tb_soyad.Text) && !string.IsNullOrEmpty(tb_email.Text) && !string.IsNullOrEmpty(tb_tel.Text) && !string.IsNullOrEmpty(tb_birhday.Text))
@@ -92,4 +78,18 @@ namespace Anket_2
             }
         }
     }
+
+    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem is Person person)
+            {
+                tb_ad.Text = person.ad;
+                tb_soyad.Text = person.soyad;
+                tb_email.Text = person.email;
+                tb_tel.Text = person.tel;
+                tb_birhday.Text = person.dogum;
+                button_deyis.Visible = true;
+                button_elave.Visible = false;
+            }
+        }
 }
